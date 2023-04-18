@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    {% include 'partial/_head.html' %}
+
+    {%block 'head'%}{% endblock %}
+</head>
+
+
+<body>
+
+    {% include 'partial/_nav.html' %}
+
+
+    <title>{% block 'title' %} BASE{% endblock %}</title>
+
+    <section class="home-section">
+        {% block 'dashboard'%}
+        {% endblock %}
+
+    </section>
+
+    {% block 'body' %}
+    {% endblock %}
+
+    {% include 'partial/_footer.html' %}
+</body>
+
+
+</html>
+
+!
